@@ -1,4 +1,4 @@
-# Demonstration-Environment-Infromed Task Chaining for SC-AIRL of Long-Horizon Tasks
+![image](https://github.com/user-attachments/assets/0aed4615-131f-4fa6-b432-70e95d673dc1)# Demonstration-Environment-Infromed Task Chaining for SC-AIRL of Long-Horizon Tasks
 Guangyu Xiang, Shaodong Li*, Guangxi University, Nanning, China (Code is coming soon)
 # Introduction
 In this work, we were interested in investigating the efficacy of SC-AIRL on long-horizon tasks. SC-AIRL is a form of Inverse Reinforcement Learning (IRL) that decomposes long-horizon tasks into multiple sub-tasks, where a discriminator, acting as a reward signal, and sub-policies are simultaneously learned using expert data. Empirically, we found that this state-of-the-art IRL-based method is unable to effectively solve longer-horizon manipulation tasks. We demonstrated that this is because SC-AIRL is susceptible to state shifts, where starting the next sub-task from an unsuitable state can lead to failure. Below, we show the connection process of SC-AIRL and a simplified example where this occurs：
@@ -7,7 +7,10 @@ In this work, we were interested in investigating the efficacy of SC-AIRL on lon
 We test our method in three long-horizon tasks with main baselines(SC-AIRL/T-STAR):
 ![image](https://github.com/Guangyu-Xiang/DEITC/blob/main/INSERT/Figure_4.jpg)
 # Experimental results and videos:
-T-STAR\SC-AIRL\DEITC in Stack task: <br>
+The main Results of our method and baselines:<br>
+![image](https://github.com/lishaodong-lab/DEITC/blob/main/Three/image.png) <br>
+<br>
+T-STAR\SC-AIRL\DEITC vedio in Stack task: <br>
 ![T-STAR in Stack task](https://github.com/Guangyu-Xiang/DEITC/blob/main/STACK/Stack-TSTAR.gif) ![SC-AIRL in Stack task](https://github.com/Guangyu-Xiang/DEITC/blob/main/STACK/Stack-SC.gif) 
 ![DEITC in Stack task](https://github.com/Guangyu-Xiang/DEITC/blob/main/STACK/Stack-DEITC.gif) <br>
 T-STAR\SC-AIRL\DEITC in Stack Three task: <br>
@@ -18,6 +21,9 @@ T-STAR\SC-AIRL\DEITC in Insert Two task: <br>
 ![DEITC in Insert Two task](https://github.com/Guangyu-Xiang/DEITC/blob/main/INSERT/DEITC.gif) <br>
 # Ablation Study:
 In this section, we further explore the impact of design variations in DEITC: 1) ablation study on the rewards for the chaining policy; 2) ablation study on fine-tuning the sub-policies and the automatic selection of terminal states.<br>
+The main Results:<br>
+![image](https://github.com/lishaodong-lab/DEITC/blob/main/image.png) <br>
+<br>
 DEITC-Demon: Chaining policy is only train through Demonstrations <br>
 ![GIF](https://github.com/lishaodong-lab/DEITC/blob/main/Three/Stack-Three-Demon.gif) <br>
 DEITC-Env: Chaining policy is only train through Envrionment feedback <br>
