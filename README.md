@@ -23,7 +23,7 @@ T-STAR\SC-AIRL\DEITC in Insert Two task: <br>
 # Ablation Study:
 In this section, we further explore the impact of design variations in DEITC: 1) ablation study on the rewards for the chaining policy; 2) ablation study on fine-tuning the sub-policies and the automatic selection of terminal states.<br>
 DEITC-Demon: Chaining policy is only train through Demonstrations <br>
-![GIF](https://github.com/Guangyu-Xiang/DEITC/blob/main/Three/demon.gif) <br>
+![GIF](https://github.com/lishaodong-lab/DEITC/blob/main/Three/Stack-Three-Demon.gif) <br>
 DEITC-Env: Chaining policy is only train through Envrionment feedback <br>
 ![GIF](https://github.com/Guangyu-Xiang/DEITC/blob/main/Three/env.gif) <br>
 DEITC-oAuto: Subpolicy is only train with automatically terminate subtask but without fine-tuning <br>
