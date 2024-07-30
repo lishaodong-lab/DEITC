@@ -3,14 +3,10 @@ Guangyu Xiang, Shaodong Li*, Guangxi University, Nanning, China (Code is coming 
 # Introduction
 In this work, we were interested in investigating the efficacy of SC-AIRL on long-horizon tasks. SC-AIRL is a form of Inverse Reinforcement Learning (IRL) that decomposes long-horizon tasks into multiple sub-tasks, where a discriminator, acting as a reward signal, and sub-policies are simultaneously learned using expert data. Empirically, we found that this state-of-the-art IRL-based method is unable to effectively solve longer-horizon manipulation tasks. We demonstrated that this is because SC-AIRL is susceptible to state shifts, where starting the next sub-task from an unsuitable state can lead to failure. Below, we show the connection process of SC-AIRL and a simplified example where this occurs：
 ![Figure_1](https://github.com/Guangyu-Xiang/DEITC/blob/main/INSERT/Figure_1.png)
-# Method
-To address the limitations of SC-AIRL in long-horizon tasks, we propose Demonstration-Environment-Informed Task Chaining. Specifically, while training the sub-policies, we simultaneously train a chaining policy using expert data to fine-tune the sub-policies. Additionally, we use environment feedback to help the chaining policy learn to end the current sub-task in an appropriate terminal state. Our method's process is as follows:
-![image](https://github.com/Guangyu-Xiang/DEITC/blob/main/INSERT/Figure_3.jpg)
-where the chaining policy takes the current state and sub-task index as inputs to evaluate whether the current state is suitable as a terminal state. The chaining policy is trained using reinforcement learning (RL), with rewards coming from both expert demonstrations and environment feedback. The chaining policy is considered as a function, denoted as CP, and its output is used as an auxiliary reward signal to fine-tune the sub-policies.
 # Experiments Setup
 We test our method in three long-horizon tasks with main baselines(SC-AIRL/T-STAR):
 ![image](https://github.com/Guangyu-Xiang/DEITC/blob/main/INSERT/Figure_4.jpg)
-# Experimental videos:
+# Experimental results and videos:
 T-STAR\SC-AIRL\DEITC in Stack task: <br>
 ![T-STAR in Stack task](https://github.com/Guangyu-Xiang/DEITC/blob/main/STACK/Stack-TSTAR.gif) ![SC-AIRL in Stack task](https://github.com/Guangyu-Xiang/DEITC/blob/main/STACK/Stack-SC.gif) 
 ![DEITC in Stack task](https://github.com/Guangyu-Xiang/DEITC/blob/main/STACK/Stack-DEITC.gif) <br>
